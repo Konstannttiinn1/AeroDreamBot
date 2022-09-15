@@ -44,7 +44,7 @@ def message_reply(message):
     elif message.text == "Назад":
         bot.send_message(message.chat.id, 'Меню', reply_markup=markup)
     elif message.text == "Стоимость полёта":
-        bot.send_message(message.chat.id 
+        bot.send_message(message.chat.id)
     else:
         bot.send_message(message.chat.id, " я не понимаю =(")
 
