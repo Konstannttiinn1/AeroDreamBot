@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot("5302829505:AAHUFUlvEg4q5yUwCkvaqrTRRp9WbhHPcSs")
+bot = telebot.TeleBot("")
 markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 item1 = types.KeyboardButton("Запись на полёт")
 item2 = types.KeyboardButton("Что одеть в полёт")
