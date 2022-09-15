@@ -28,6 +28,8 @@ def message_reply(message):
                          " Для записи на полёт можно позвонить по номеру телефона () либо написать нашему администратору ( @79117887506)")
     elif message.text == "Что одеть в полёт":
         bot.send_message(message.chat.id, " Одевай обычную одежду ")
+        elif message.text == "Что одеть в полёт":
+        bot.send_message(message.chat.id, " Одевай обычную одежду ")
     elif message.text == "Где находится аэротруба":
         markup2 = types.ReplyKeyboardMarkup(resize_keyboard=True)
         item5 = types.KeyboardButton("Локация")
@@ -35,12 +37,14 @@ def message_reply(message):
         item7 = types.KeyboardButton("Назад")
         markup2.add(item5, item6, item7)
         bot.send_message(message.chat.id, 'Меню', reply_markup=markup2)
-    if message.text == "Локация":
+    elif message.text == "Локация":
         bot.send_location(message.chat.id, 59.87177, 30.34638)
     elif message.text == "Фото":
         bot.send_photo(message.chat.id, open('C:\\Users\\79215\\PycharmProjects\\pythonProject1\\kap.jpg', 'rb'))
     elif message.text == "Назад":
         bot.send_message(message.chat.id, 'Меню', reply_markup=markup)
+    elif message.text == "Стоимость полёта":
+        bot.send_message(message.chat.id 
     else:
         bot.send_message(message.chat.id, " я не понимаю =(")
 
