@@ -1,2 +1,1 @@
-Коммерческий бот для компании AeroDream. 
-AeroDream.ru
+Коммерческий бот для компании AeroDream.ru
