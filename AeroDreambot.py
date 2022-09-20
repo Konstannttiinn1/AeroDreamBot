@@ -37,6 +37,15 @@ def message_reply(message):
     else:
         bot.send_message(message.chat.id, " я не понимаю =(")
 
+@bot.callback_query_handler(func=lambda call: True)
+def cal(call):
+    if call.data == "Что одеть?":
+        bot.send_message(call.message.chat.id, "Тест одежда")
+    elif call.data == "время":
+        bot.send_message(call.message.chat.id, "вовремя")
+    elif call.data == "что с собой брать?":
+        bot.send_message(call.message.chat.id, "настроение")
+    elif call.data == "где можно переодеться":
+        bot.send_message(call.message.chat.id, "переодется можно у нас")
 
 bot.infinity_polling(timeout=0.5)
-
