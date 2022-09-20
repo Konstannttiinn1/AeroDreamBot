@@ -19,10 +19,9 @@ def button_message(message):
 @bot.message_handler(content_types=['text'])
 def message_reply(message):
     if message.text == "Запись на полёт ✈":
-        bot.send_message(message.chat.id,
-    " Для записи на полёт можно позвонить по номеру телефона () либо написать нашему администратору ( @79117887506)")
-    elif message.text == "Основные вопросы (faq)":
-        bot.send_message(message.chat.id, "Основные вопросы (faq) В РАЗРАБОТКЕ")
+        bot.send_message(message.chat.id, val.test)
+    elif message.text == "Основные вопросы":
+        bot.send_message(message.chat.id, "Основные вопросы", reply_markup=val.questions)
     elif message.text == "Как нас найти":
         bot.send_message(message.chat.id, 'Меню', reply_markup=val.location)
     elif message.text == "Локация":
@@ -39,4 +38,5 @@ def message_reply(message):
         bot.send_message(message.chat.id, " я не понимаю =(")
 
 
-bot.infinity_polling(timeout=1)
+bot.infinity_polling(timeout=0.5)
+
