@@ -1,25 +1,36 @@
 import telebot
 from telebot import types
 
+questions = types.InlineKeyboardMarkup(row_width=2)
+questions1 = types.InlineKeyboardButton("Что одеть?", callback_data="Одевай что хочешь")
+questions2 = types.InlineKeyboardButton("в какое время приходить?", callback_data="в какое время приходить?")
+questions3 = types.InlineKeyboardButton("что с собой брать?", callback_data="что с собой брать?")
+questions4 = types.InlineKeyboardButton("где можно переодеться", callback_data="где можно переодеться")
+questions.add(questions4, questions3, questions2, questions1)
+
 certificates = types.InlineKeyboardMarkup(row_width=1)
-item12 = types.InlineKeyboardButton("Ссылка на сайт", callback_data="Сертификаты", url="https://aerodream.spb.ru/certificates/" )
+item12 = types.InlineKeyboardButton("Ссылка на сайт", url="https://aerodream.spb.ru/certificates/" )
 certificates.add(item12)
 
 inlineprice = types.InlineKeyboardMarkup(row_width=2)
-item10 = types.InlineKeyboardButton("Тарифы для детей", callback_data="Тарифя для детей", url="https://aerodream.spb.ru/tariffs/tarify-dlya-detey/" )
-item11 = types.InlineKeyboardButton("Тарифы для взросылх", callback_data="Тарифя для взросылх", url="https://aerodream.spb.ru/tariffs/tarify-dlya-vzroslykh/")
+price1 = types.InlineKeyboardButton("Тарифы для детей", url="https://aerodream.spb.ru/tariffs/tarify-dlya-detey/" )
+price2 = types.InlineKeyboardButton("Тарифы для взросылх",  url="https://aerodream.spb.ru/tariffs/tarify-dlya-vzroslykh/")
+inlineprice.add(price2, price1)
 
 menu = types.ReplyKeyboardMarkup(resize_keyboard=True)
-item1 = types.KeyboardButton("Цены")
-item2 = types.KeyboardButton("Запись на полёт ✈")
-item3 = types.KeyboardButton("Купить подарочный сертификат")
-item4 = types.KeyboardButton("Основные вопросы (faq)")
-item8 = types.KeyboardButton("Как нас найти")
-menu.add(item1, item2, item3, item4, item8)
+menu1 = types.KeyboardButton("Цены")
+menu2 = types.KeyboardButton("Запись на полёт ✈")
+menu3 = types.KeyboardButton("Купить подарочный сертификат")
+menu4 = types.KeyboardButton("Основные вопросы")
+menu8 = types.KeyboardButton("Как нас найти")
+menu.add(menu1, menu2, menu3, menu4, menu8)
 
 location = types.ReplyKeyboardMarkup(resize_keyboard=True)
-item5 = types.KeyboardButton("Локация")
-item6 = types.KeyboardButton("Фото")
-item7 = types.KeyboardButton("Назад")
-location.add(item5, item6, item7)
+location1 = types.KeyboardButton("Локация")
+location2 = types.KeyboardButton("Фото")
+location3 = types.KeyboardButton("Назад")
+location.add(location1, location2, location3)
+
+test = " Для записи на полёт можно позвонить по номеру телефона () либо написать нашему администратору ( @79117887506)"
+
 
