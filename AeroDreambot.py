@@ -49,3 +49,4 @@ def cal(call):
         bot.send_message(call.message.chat.id, "переодется можно у нас")
 
 bot.infinity_polling(timeout=0.5)
+  
