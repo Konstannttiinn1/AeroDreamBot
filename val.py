@@ -18,11 +18,11 @@ price2 = types.InlineKeyboardButton("Тарифы для взросылх", url=
 inlineprice.add(price2, price1)
 
 menu = types.ReplyKeyboardMarkup(resize_keyboard=True)
-menu1 = types.KeyboardButton("Цены")
+menu1 = types.KeyboardButton("Цены 💸")
 menu2 = types.KeyboardButton("Запись на полёт ✈")
 menu3 = types.KeyboardButton("Купить подарочный сертификат")
-menu4 = types.KeyboardButton("Основные вопросы")
-menu8 = types.KeyboardButton("Как нас найти")
+menu4 = types.KeyboardButton("Основные вопросы ❓")
+menu8 = types.KeyboardButton("Как нас найти 🎯")
 menu.add(menu1, menu2, menu3, menu4, menu8)
 
 location = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -31,5 +31,5 @@ location2 = types.KeyboardButton("Фото")
 location3 = types.KeyboardButton("Назад")
 location.add(location1, location2, location3)
 
-test = "Для записи на полёт можно позвонить по номеру телефона () либо написать нашему администратору ( @aerodream_aerotruba)"
+test = "Для записи на полёт можно позвонить по номеру телефона +7(800)775-97-11  либо написать нашему администратору (@aerodream_aerotruba)"
 
