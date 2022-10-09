@@ -45,6 +45,10 @@ def cal(call):
         bot.send_message(call.message.chat.id, "настроение")
     elif call.data == "где можно переодеться":
         bot.send_message(call.message.chat.id, "переодется можно у нас")
-    elif call.data ==
+    elif call.data == "Тарифы для детей":
+        bot.send_message(call.message.chat.id, "Список тарфифов для  детей")
+    elif call.data == "Тарифы для взрослых":
+        bot.send_message(call.message.chat.id, val.sort(val.Price))
+
 
 bot.infinity_polling(timeout=0.5)

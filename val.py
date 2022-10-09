@@ -13,8 +13,8 @@ item12 = types.InlineKeyboardButton("Ссылка на сайт", url="https://a
 certificates.add(item12)
 
 inlineprice = types.InlineKeyboardMarkup(row_width=2)
-price1 = types.InlineKeyboardButton("Тарифы для детей", url="https://aerodream.spb.ru/tariffs/tarify-dlya-detey/")
-price2 = types.InlineKeyboardButton("Тарифы для взросылх", url="https://aerodream.spb.ru/tariffs/tarify-dlya-vzroslykh/")
+price1 = types.InlineKeyboardButton("Тарифы для детей", callback_data="Тарифы для детей", cache_time=False)
+price2 = types.InlineKeyboardButton("Тарифы для взросылх", callback_data="Тарифы для взрослых")
 inlineprice.add(price2, price1)
 
 menu = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -33,3 +33,9 @@ location.add(location1, location2, location3)
 
 recordfly = "Для записи на полёт можно позвонить по номеру телефона +7(800)775-97-11  либо написать нашему администратору (@aerodream_aerotruba)"
 
+Price = ["f", "d", "s", "a", "w", "t"]
+price2= []
+def sort(Price):
+    for i in Price:
+        x = i + "\n"
+        return i
