@@ -31,5 +31,5 @@ location2 = types.KeyboardButton("Фото")
 location3 = types.KeyboardButton("Назад")
 location.add(location1, location2, location3)
 
-test = "Для записи на полёт можно позвонить по номеру телефона +7(800)775-97-11  либо написать нашему администратору (@aerodream_aerotruba)"
+recordfly = "Для записи на полёт можно позвонить по номеру телефона +7(800)775-97-11  либо написать нашему администратору (@aerodream_aerotruba)"
 
