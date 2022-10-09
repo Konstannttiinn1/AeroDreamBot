@@ -9,11 +9,6 @@ def start_message(message):
     bot.send_message(message.chat.id, 'Меню', reply_markup=val.menu)
 
 
-#@bot.message_handler(commands=['Menu'])
-#def button_message(message):
-#    bot.send_message(message.chat.id, 'Меню', reply_markup=val.menu)
-
-
 @bot.message_handler(content_types=['text'])
 def message_reply(message):
     if message.text == "Запись на полёт ✈":
@@ -40,15 +35,15 @@ def cal(call):
     if call.data == "Что одеть?":
         bot.send_message(call.message.chat.id, "Тест одежда")
     elif call.data == "время":
-        bot.send_message(call.message.chat.id, "вовремя")
+        bot.send_message(call.message.chat.id, "во время")
     elif call.data == "что с собой брать?":
         bot.send_message(call.message.chat.id, "настроение")
-    elif call.data == "где можно переодеться":
+    elif call.data == "где можно переодеться?":
         bot.send_message(call.message.chat.id, "переодется можно у нас")
     elif call.data == "Тарифы для детей":
-        bot.send_message(call.message.chat.id, "Список тарфифов для  детей")
+        bot.send_message(call.message.chat.id, val.pricechildren)
     elif call.data == "Тарифы для взрослых":
-        bot.send_message(call.message.chat.id, val.sort(val.Price))
+        bot.send_message(call.message.chat.id, val.Priceman)
 
 
 bot.infinity_polling(timeout=0.5)

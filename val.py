@@ -5,8 +5,10 @@ questions = types.InlineKeyboardMarkup(row_width=2)
 questions1 = types.InlineKeyboardButton("Что одеть?", callback_data="Что одеть?")
 questions2 = types.InlineKeyboardButton("в какое время приходить?", callback_data="время")
 questions3 = types.InlineKeyboardButton("что с собой брать?", callback_data="что с собой брать?")
-questions4 = types.InlineKeyboardButton("где можно переодеться", callback_data="где можно переодеться")
-questions.add(questions4, questions3, questions2, questions1)
+questions4 = types.InlineKeyboardButton("где можно переодеться?", callback_data="где можно переодеться?")
+questions5 = types.InlineKeyboardButton("Со скольки лет полёт?", callback_data="Со скольки лет полёт?")
+
+questions.add(questions4, questions3, questions2, questions1, questions5)
 
 certificates = types.InlineKeyboardMarkup(row_width=1)
 item12 = types.InlineKeyboardButton("Ссылка на сайт", url="https://aerodream.spb.ru/certificates/" )
@@ -31,11 +33,11 @@ location2 = types.KeyboardButton("Фото")
 location3 = types.KeyboardButton("Назад")
 location.add(location1, location2, location3)
 
-recordfly = "Для записи на полёт можно позвонить по номеру телефона +7(800)775-97-11  либо написать нашему администратору (@aerodream_aerotruba)"
+recordfly = "Для записи на полёт можно позвонить по номеру телефона +7(800)775-97-11  либо написать нашему администратору (@aerodream_aerotruba) \nЗаписаться на полёт или задать вопросы можно с 10 до 22"
 
-Price = ["f", "d", "s", "a", "w", "t"]
-price2= []
-def sort(Price):
-    for i in Price:
-        x = i + "\n"
-        return i
+Priceman = ("Старт - 3 минуты = 3290 руб.\nВзлёт - 5 минут = 4000 руб.\nНовичок х2 - 10 минут = 6000 руб.\nСемейный - 15 минут = 8800 руб.\nДрайв - 20 минут = 10290 руб.\nПраздник в аэротрубе - 60 минут = 24000 руб."
+         "\n"
+         "\nдля более подробной информацией и посмотреть акции, можно пройти по ссылке")
+pricechildren = ("Старт детский - 3 минуты = 2090 руб.\nВзлёт детский - 5 минут = 3090 руб.\nНебо детский - 10 минут = 5290 руб.\nДетский праздник - 60 минут = 19990 руб."
+         "\n"
+         "\nдля более подробной информацией и посмотреть акции, можно пройти по ссылке")
