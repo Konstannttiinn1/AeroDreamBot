@@ -17,7 +17,7 @@ def start_message(message):
 @bot.message_handler(content_types=['text'])
 def message_reply(message):
     if message.text == "Запись на полёт ✈":
-        bot.send_message(message.chat.id, val.test)
+        bot.send_message(message.chat.id, val.recordfly)
     elif message.text == "Основные вопросы ❓":
         bot.send_message(message.chat.id, "Основные вопросы", reply_markup=val.questions)
     elif message.text == "Как нас найти 🎯":
@@ -45,5 +45,6 @@ def cal(call):
         bot.send_message(call.message.chat.id, "настроение")
     elif call.data == "где можно переодеться":
         bot.send_message(call.message.chat.id, "переодется можно у нас")
+    elif call.data ==
 
 bot.infinity_polling(timeout=0.5)
